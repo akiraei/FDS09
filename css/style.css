@@ -33,29 +33,34 @@ body{
 .main{
     background-color: pink;
     height: 60vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
 .main section{
-    /* background-color: #3fc; */
+    background-color: teal;
+    height: 30vh;
 }
 .recommend-book{
-
+    width: 350px;
 }
 .news{
-    
+    width: 650px;   
 }
 .board{
-    
+    width: 350px;
 }
 .favorite-site{
-
+    order: 1;
+    width: 250px;
 }
 .twitter{
-
+    width: 400px;
 }
 /* 슬로건 */
 .slogan{
-    background-color: orange;
-    height: 10vh;
+    background-color: orange; 
+    height: 10vh; 
 }
 /* 푸터 */
 .footer{

@@ -1,13 +1,33 @@
 @charset "utf-8";
-
+@import url("normalize.css");
+@import url("fonts.css");
+/* 초기화 스타일 */
 *, *::before, *::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+ul{
+    list-style-type: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+/* 숨김 콘텐츠 */
+legend{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    position: absolute;
+    clip: rect(0,0,0,0);
+}
+/* 기본 스타일 */
 body{
     background-color: #fff;
+    color: #181818;
+    font-family: 'Noto Sans Regular', sans-serif;
 }
 /* 컨테이너 */
 .container{

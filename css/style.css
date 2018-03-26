@@ -51,35 +51,50 @@ body{
 /* 메인 콘텐츠 */
 .main{
     background-color: pink;
-    height: 60vh;
-    display: flex;
+    /* display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-between; */
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
 }
 .main section{
-    background-color: teal;
     height: 30vh;
 }
 .recommend-book{
     width: 350px;
+    background-color: teal;
+    float: left;
 }
 .news{
-    width: 650px;   
+    width: 650px; 
+    background-color: tan;
+    float: left;
 }
 .board{
     width: 350px;
+    background-color: skyblue;
+    float: left;
 }
 .favorite-site{
-    order: 1;
+    /* order: 1; */
     width: 250px;
+    background-color: orangered;
+    float: right;
 }
 .twitter{
     width: 400px;
+    background-color: blueviolet;
+    float: left;
 }
 /* 슬로건 */
 .slogan{
-    background-color: orange; 
+    background-color: silver; 
     height: 10vh; 
+    clear: both;
+    margin-top: 10px;
 }
 /* 푸터 */
 .footer{

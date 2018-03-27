@@ -46,22 +46,32 @@ body{
 /* 로고 */
 .logo{
     background-color: blue;
-    float: left;
     margin: 0;
-    padding: 1em; 
 }
 /* 멤버 링크 */
 .member{
     background-color: aqua;
-    float: right;
+    text-align: right;
+    font-size: 0;
 }
 .member li{
-    float: left;
+    display: inline;
+    font-size: 1rem;
+    /* float: left; */
+}
+.member li::before{
+    content: "|";
+}
+.member li:first-child::before{
+    content: "";
+}
+.member a{
+    background-color: tan;
+    padding: 20px 10px;
+    display: inline-block;
 }
 /* 검색 폼 */
 .search{
-    clear: both;
-    float: right;
 }
 .search fieldset{
     border: 0;

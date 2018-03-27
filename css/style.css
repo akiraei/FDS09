@@ -49,42 +49,29 @@ body{
 /* 로고 */
 .logo{
     margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50px;
-    /* margin-top: ?; 배치하고자 하는 이미지 높의 절반 크기만큼 음수로 지정*/
-    transform: translateY(-50%);
 }
 .logo a, .logo img{
     display: block;
-    line-height: 1;
 }
 /* 멤버 링크 */
 .member{
-    text-align: right;
-    font-size: 0;
-    position: relative;
-    right: -10px;
-    margin-bottom: 10px;
+
 }
 .member li{
-    display: inline;
-    font-size: 1rem;
+   
 }
-.member li::before{
+/* .member li::before{
     content: "|";
 }
 .member li:first-child::before{
     content: "";
-}
+} */
 .member a{
-    padding: 10px;
-    display: inline-block;
+ 
 }
 /* 검색 폼 */
 .search{
-    text-align: right;
-    margin-top: 10px;
+
 }
 .search fieldset{
     border: 0;

@@ -25,11 +25,16 @@ legend, .a11y-hidden{
     clip: rect(0,0,0,0);
 }
 /* 기본 스타일 */
+html{
+    font-size: 10px;
+}
 body{
     background-color: #fff;
     color: #181818;
+    font-size: 1.4rem;
     font-family: 'Noto Sans Regular', sans-serif;
 }
+
 /* 컨테이너 */
 .container{
     height: 100vh;
@@ -54,19 +59,7 @@ body{
     grid-template-rows: 50px 50px;
     grid-column-gap: 20px;
 }
-header::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: repeating-linear-gradient(to right, 
-    rgba(255, 0, 0, 0.2), 
-    rgba(255, 0, 0, 0.2) 65px, 
-    transparent 65px, 
-    transparent 85px);
-    width: 100%;
-    height: 100%;
-}
+
 /* 로고 */
 .logo{
     margin: 0;
@@ -76,7 +69,6 @@ header::after{
     -ms-grid-row-span: 3;
     grid-column: 1 / span 3 ;
     grid-row: 1/ span 2;
-    background: orange;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,7 +86,6 @@ header::after{
     grid-row: 1 / 2;
     display: flex;
     justify-content: flex-end;
-    background: yellow;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -119,7 +110,6 @@ header::after{
     -ms-grid-row-span: 3;
     grid-column: 7 / span 6 ;
     grid-row: 2 / 3;
-    background: aqua;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -146,12 +136,71 @@ input[type="search"]{
     background-color: #988574;
     border-radius: 5px;
 }
-
-
 /* 내비게이션 */
 .navigation{
-    background-color: lime;
-    height: 10vh;
+    padding-top: 0.5em;
+    background-color: #988574;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    /* height: 100px;
+    overflow: auto; */
+    /* background-image: url("../images/normal.jpg");
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    background-attachment: fixed; */
+    /* background: #988574 url("../images/small.jpg") 100% 0% /200px no-repeat scroll; */
+    /* background-color: #988574; */
+    /* background: 
+    url("../images/normal.jpg") no-repeat 0% 0% /200px scroll,
+    url("../images/small.jpg") no-repeat 100% 0% /200px scroll; */
+    /* background-image: 
+    url("../images/normal.jpg"), url("../images/small.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 0, 100% 0;
+    background-size: 200px, 300px;
+    background-attachment: scroll, scroll;  */
+    /* background-image:
+    linear-gradient(180deg, 
+    rgba(255, 0, 0, .2), 
+    rgba(255, 0, 0, .2) 35%,
+    rgba(0, 255, 0, .2) 35%, 
+    rgba(0, 255, 0, .2) 70%,
+    rgba(0, 0, 255, .2) 70%, 
+    rgba(0, 0, 255, .2) 100%),
+    url("../images/normal.jpg");
+    background-repeat: no-repeat, repeat;
+    background-position: 0 0;
+    background-size: 100%; */
+    /* background-image: radial-gradient(circle at 70% 20%,green 50%, red 50%); */
+    /* background-image: repeating-linear-gradient(90deg,red, red 10%, blue 10%, blue 20%); */
+    /* background-image: repeating-radial-gradient(green, green 50px, yellow 50px,yellow 100px); */
+    /* background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%); */
+}  
+.menu{
+    width: 1000px;
+    margin: 0 auto;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+}
+.menu span{
+    display: block;
+    cursor: pointer;
+    font-size: 1.8rem;
+    padding: 0.5em 0;
+    font-family: 'Noto Sans Bold', sans-serif;
+}
+.sub-menu{
+    margin-top:0.5em;
+}
+.sub-menu li{
+    margin: 0.5em 0 0.5em 1em;
+}
+.sub-menu a{
+    display: block;
+    padding: 0.5em 0;
 }
 /* 메인 콘텐츠 */
 .main{

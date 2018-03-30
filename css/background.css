@@ -1,0 +1,53 @@
+@charset "utf-8";
+@import url("reset.css");
+body{
+    font-size: 1.5rem;
+    color: #181818;
+}
+/* 헤더 */
+.header{
+    height: 100px;
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 1px 5px 0 #999;
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
+.brand{
+    font-size: 2rem;
+}
+.menu{
+    display: flex;
+}
+.menu a{
+    text-decoration: none;
+    font-size: 1em;
+    padding: 0.5em;
+    margin-left: 0.5em;
+}
+/* 섹션 */
+section{
+    height: 50vh;
+}
+.normal{
+    background: url("../images/normal.jpg") no-repeat 0 0 fixed;
+}
+.small{
+    background: #fff;
+}
+.medium{
+    background: url("../images/medium.jpg") no-repeat 0 0 /100% fixed;
+}
+.large{
+    background: #fff;
+}
+/* 푸터 */
+.footer{
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    box-shadow: inset, 0 -1px 5px 0 #999; /* 그림자 효과 적용 안됨 확인필요 */
+}

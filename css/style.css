@@ -34,12 +34,33 @@ body{
     font-size: 1.4rem;
     font-family: 'Noto Sans Regular', sans-serif;
 }
+/* 그리드 토글 버튼 */
+.btn-grid{
+    position: fixed;
+    top: 2em;
+    right: 2em;
+    background: #000;
+    color: #fff;
+    padding: 1em;
+    border-radius: 5px;
+}
 
 /* 컨테이너 */
 .container{
-    height: 100vh;
-    background: gray;
+    position: relative;
 }
+.is-act::before{
+    content: "";
+    position: absolute;
+    width: 1000px;
+    height: 100%;
+    background: repeating-linear-gradient(90deg, hsla(70, 90%, 60%, .4) 0px, hsla(70, 90%, 60%, .4) 65px, transparent 65px, transparent 85px);
+    z-index: 100;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
 /* 레이아웃 공통 */
 .header, .main, .slogan{
     width: 1000px;
@@ -181,9 +202,6 @@ input[type="search"]{
 /* 메인 콘텐츠 */
 .main{
     background-color: pink;
-    /* display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between; */
 }
 .clearfix::after{
     content: "";
@@ -194,30 +212,19 @@ input[type="search"]{
     height: 30vh;
 }
 .recommend-book{
-    width: 350px;
     background-color: teal;
-    float: left;
 }
 .news{
-    width: 650px; 
     background-color: tan;
-    float: left;
 }
 .board{
-    width: 350px;
     background-color: skyblue;
-    float: left;
 }
 .favorite-site{
-    /* order: 1; */
-    width: 250px;
     background-color: orangered;
-    float: right;
 }
 .twitter{
-    width: 400px;
     background-color: blueviolet;
-    float: left;
 }
 /* 슬로건 */
 .slogan{

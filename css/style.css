@@ -232,7 +232,7 @@ input[type="search"]{
     background-color: tan;
     grid-area: news;
     -ms-grid-column: 9;
-    -ms-grid-column-span: 24;
+    -ms-grid-column-span: 23;
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
 }
@@ -255,8 +255,8 @@ input[type="search"]{
 .twitter{
     background-color: blueviolet;
     grid-area: twitter;
-    -ms-grid-column: 19;
-    -ms-grid-column-span: 24;
+    -ms-grid-column: 20;
+    -ms-grid-column-span: 23;
     -ms-grid-row: 2;
     -ms-grid-row-span: 3;
 }

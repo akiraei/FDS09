@@ -24,6 +24,13 @@ legend, .a11y-hidden{
     position: absolute;
     clip: rect(0,0,0,0);
 }
+/* ClearFix */
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
 /* 기본 스타일 */
 html{
     font-size: 10px;
@@ -111,17 +118,14 @@ body{
     justify-content: flex-end;
     align-items: center;
 }
-.member li{
-   
-}
-/* .member li::before{
+.member li::before{
     content: "|";
 }
 .member li:first-child::before{
     content: "";
-} */
+}
 .member a{
- 
+ padding: 0.5em 1em;
 }
 /* 검색 폼 */
 .search{
@@ -146,7 +150,8 @@ input[type="search"]{
     width: 400px;
     padding: 2px 2px 2px 10px;
     border: 1px solid #666;
-    border-radius: 50px;
+    border-radius: 5px;
+    margin-right: .5em;
 }
 .btn-search{
     height: 35px;
@@ -202,29 +207,58 @@ input[type="search"]{
 /* 메인 콘텐츠 */
 .main{
     background-color: pink;
-}
-.clearfix::after{
-    content: "";
-    clear: both;
-    display: block;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns:65px 20px 65px 20px 65px 20px 65px 20px 65px 20px 65px 20px 65px 20px 65px 20px 65px 20px 65px 20px 65px 20px 65px;
+    -ms-grid-rows:auto auto;
+    grid-template-columns: repeat(12, 65px);
+    grid-column-gap: 20px;
+    grid-template-rows: auto auto;
+    grid-template-areas: "book  book  book  book  news    news    news    news    news    news news news"
+                         "board board board board twitter twitter twitter twitter twitter site site site";
 }
 .main section{
     height: 30vh;
 }
 .recommend-book{
     background-color: teal;
+    grid-area: book;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 8;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
 }
 .news{
     background-color: tan;
+    grid-area: news;
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 24;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
 }
 .board{
     background-color: skyblue;
+    grid-area: board;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 8;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 3;
 }
 .favorite-site{
     background-color: orangered;
+    grid-area: site;
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 18;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 3;
 }
 .twitter{
     background-color: blueviolet;
+    grid-area: twitter;
+    -ms-grid-column: 19;
+    -ms-grid-column-span: 24;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 3;
 }
 /* 슬로건 */
 .slogan{

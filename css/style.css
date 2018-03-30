@@ -74,8 +74,6 @@ body{
     margin: 0 auto;
 }
 /* 헤더 */
-
-
 .header{
     background-color: #fff;
     position: relative;
@@ -206,7 +204,6 @@ input[type="search"]{
 }
 /* 메인 콘텐츠 */
 .main{
-    background-color: pink;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns:65px 20px 65px 20px 65px 20px 65px 20px 65px 20px 65px 20px 65px 20px 65px 20px 65px 20px 65px 20px 65px 20px 65px;
@@ -217,16 +214,54 @@ input[type="search"]{
     grid-template-areas: "book  book  book  book  news    news    news    news    news    news news news"
                          "board board board board twitter twitter twitter twitter twitter site site site";
 }
-.main section{
+/* .main section{
     height: 30vh;
-}
+} */
+/* 추천 서적 */
 .recommend-book{
-    background-color: teal;
     grid-area: book;
     -ms-grid-column: 1;
     -ms-grid-column-span: 8;
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
+}
+/* 추천서적 제목 */
+.recommend-book-heading{
+    background: url("images/sprite_main.png") no-repeat;
+    margin: 1em 0;
+    min-height: 60px;
+    padding: 5px 0 0 65px;
+}
+.recommend-book-heading .en-heading{
+    display: block;
+    color: #abd375;
+}
+/* 추천서적 커버이미지 */
+.recommend-book-cover{
+    width: 15em;
+    margin: 1em auto;
+    text-align: center;
+}
+.recommend-book-cover img{
+    max-width: 100%;
+}
+/* 추천서적 저자 및 평점 */
+.recommend-book-detail{
+    text-align: center;
+    margin: 1em 0;
+}
+.recommend-book-author, .recommend-book-author-name{
+    display: inline-block;
+}
+/* 추천서적 평점 */
+.recommend-book-grade{
+    color: #abd375;
+    font-size: 2em;
+}
+/* 추천서적 요약정보 */
+.recommend-book-summary{
+    line-height: 1.5;
+    margin: 1em 0;
 }
 .news{
     background-color: tan;

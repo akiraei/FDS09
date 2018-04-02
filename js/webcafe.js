@@ -3,7 +3,7 @@
 // video 관련 API를 이용하여 재생과 정지를 제어할 수 있음.
 $(document).ready(function(){
     var container = $('.container');
-    var grid = document.querySelector('.btn-grid');
+    var grid = $('.btn-grid');
     var video = $('.news-video');
     grid.on('click', function(){
         container.toggleClass('is-act');

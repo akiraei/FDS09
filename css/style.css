@@ -297,7 +297,6 @@ input[type="search"]{
 }
 /* 새소식 날짜 정보 */
 .news-date{
-    background: yellow;
     display: block;
     text-align: right;
 }
@@ -353,12 +352,49 @@ input[type="search"]{
 }
 /* 트위터 */
 .twitter{
-    background-color: blueviolet;
     grid-area: twitter;
     -ms-grid-column: 20;
     -ms-grid-column-span: 23;
     -ms-grid-row: 2;
     -ms-grid-row-span: 3;
+}
+/* 트위터 제목 */
+.twitter-heading{
+    background-position: 0 -460px;
+}
+.twitter-heading .en-heading{
+    color: #6aaee6;
+}
+/* 트위터 사용자 정보 */
+.twitter-user-info{
+    float: left;
+    margin-bottom: 1em;
+    width: calc(100% - 150px);
+}
+.twitter-user-name, .twitter-user-id{
+    float: left;
+}
+.twitter-user-name{
+    color: #6aaee6;
+}
+.twitter-user-id{
+    font-family: "Noto Sans Bold";
+}
+/* 트위터 사용자 프로필 이미지 */
+.twitter-profile{
+    float: right;
+    margin: 0 0 0.5em 1em;
+}
+.twitter-thumbnail{
+    border-radius: 50%;
+    padding: 0.5em;
+    border: 1px solid #333;
+}
+/* 트위터 게시물 날짜 */
+.twitter-date{
+    display: block;
+    clear: both;
+    text-align: right;
 }
 /* 슬로건 */
 .slogan{

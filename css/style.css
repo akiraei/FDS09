@@ -343,13 +343,36 @@ input[type="search"]{
 }
 /* 인기 사이트 */
 .favorite-site{
-    background-color: orangered;
     grid-area: site;
     -ms-grid-column: 9;
     -ms-grid-column-span: 18;
     -ms-grid-row: 2;
     -ms-grid-row-span: 3;
 }
+/* 인기 사이트 제목 */
+.favorite-site-heading{
+    background-position: 0 -345px;
+}
+.favorite-site-heading .en-heading{
+    color: #eea60a;
+}
+/* 인기 사이트 목록 */
+.favorite-site-list{
+    overflow: hidden;
+}
+.favorite-site-list li{
+   counter-increment: number;
+   margin: 1em 0;
+}
+.favorite-site-list li::before{
+    content: counter(number, decimal);
+    background: #eea60a;
+    color: #fff;
+    border-radius: 50%;
+    padding: 0 .5em;
+    margin-right: .5em;
+}
+
 /* 트위터 */
 .twitter{
     grid-area: twitter;

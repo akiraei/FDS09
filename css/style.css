@@ -357,9 +357,6 @@ body {
     list-style-type: disc;
     margin-left: 3em;
 }
-.menu-act+.sub-menu{
-    display: block;
-}
 .sub-menu a{
     display: block;
     padding: .5em 0;

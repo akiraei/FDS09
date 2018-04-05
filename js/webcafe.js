@@ -27,7 +27,7 @@ $(document).ready(function () {
   
       menuItems.on('click keydown', function(e) {
         if (e.type === 'click' || (e.type === 'keydown' && e.keyCode === 13)) {
-          menuLists.removeClass('is-act');
+          menuLists.removeClass('menu-act');
           menuItems.addClass('icon-plus');
           subMenus.css('display', 'none');
           $(this).parent().addClass('menu-act');

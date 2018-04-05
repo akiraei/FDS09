@@ -220,7 +220,7 @@ body {
 }
 .copyright {
   font-size: 1em;
-
+}
 /* 모바일 디바이스 */
 @media screen and (max-width: 999px) {
   body {

@@ -1,7 +1,13 @@
 $(document).ready(function(){
-    var container = $('.container');
-    var grid = $('.btn-grid');
+    var nav = $('.navigation');
+    var btn = $('.btn-menubar');
+    var span = $('.menubar'); 
     var video = $('.news-video');
+    btn.on('click', function(){
+        nav.toggleClass('is-act');
+    })
+
+
     video.get(0).volume = 0.0;
 
     video.on('mouseover focusin', function(){
@@ -11,8 +17,6 @@ $(document).ready(function(){
     video.on('mouseout focusout', function(){
         this.pause();
     });
-    grid.click(function(){
-        container.toggleClass('is-act');
-    });
+
 
 });

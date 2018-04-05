@@ -226,6 +226,68 @@ body {
   body {
     font-size: 1.6rem;
   }
+  /* 모바일 헤더 */
+  .header{
+      background: #38302e;
+      padding: 0 1em;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 1em;
+  }
+  /* 모바일 로고 */
+  .logo{
+      margin: 0;
+      padding: .5em 0 .25em;
+  }
+  /* 모바일 멤버링크 */
+  .member{
+      background: #988574;
+      order: -1;
+      display: flex;
+      justify-content: flex-end;
+      color: #fff;
+      margin: 0 -1em;
+      padding: 0.35em 0;
+  }
+  .member a{
+      display: block;
+      padding: .5em 1em; 
+  }
+  .member a:hover, .member a:focus{
+      color: #ffc;
+  }
+  /* 모바일 검색 폼 */
+  input[type="search"]{
+      width: calc(100% - 40px);
+      height: 30px;
+      border: 1px solid #666;
+      border-radius: 5px;
+      margin-right: 5px;
+      padding: 1px 1px 1px 1em;
+  }
+  .btn-search{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    background: transparent;
+  }
+  .btn-search::after{
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      background: url("images/btn_search.png") no-repeat 0 0;
+      background-size: 100%;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      padding: 0;
+  }
+  /* 추가 설명 필요 */
+  .board{
+      position: relative;
+  }
+
 }
 /* 데스크탑 디바이스 */
 @media screen and (min-width: 1000px) {

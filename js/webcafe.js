@@ -32,7 +32,6 @@ $(document).ready(function () {
             menuItems.addClass('icon-plus');
             subMenus.css('display', 'none');
             menuItems.attr('tabindex', '0');
-            $(this).parent().addClass('menu-act');
             if($(this).parent().hasClass('menu-act')){
                 $(this).addClass('icon-minus');
                 $(this).removeClass('icon-plus');

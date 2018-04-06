@@ -33,7 +33,11 @@ legend,
   clear: both;
   display: block;
 }
-
+/* 반응형 콘텐츠 */
+.responsive{
+    max-width: 100%;
+    height: auto;
+}
 /* 기본 스타일 */
 html {
   font-size: 10px;
@@ -128,7 +132,7 @@ body {
 }
 .board-list a {
   display: inline-block;
-  width: calc(100% - 100px);
+  width: calc(100% - 8em);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -335,6 +339,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
     background: rgba(0,0,0,.85);
     color: #fff;
     width: 70vw;
@@ -362,11 +367,34 @@ body {
     padding: .5em 0;
     margin: .5em 0;
 }
-  /* 추가 설명 필요 */
+/* 모바일 메인 콘텐츠 */
+.main{
+    padding: 0 1em;
+}
+  /* 모바일 게시판 */
   .board{
       position: relative;
   }
-
+  /* 모바일 사용자 정보 */
+  .twitter-user-info{
+      width: 65%;
+  }
+  /* 모바일 트위터 사용자 프로필 이미지 */
+.twitter-profile {
+    width: 30%;
+  }
+/* 모바일 슬로건 */
+.slogan{
+    padding: 2em 1em 1em 1em;
+}
+/* 모바일 푸터 */
+.footer{
+    text-align: left;
+    padding: 1em;
+}
+.address span{
+    display: block;
+}
 }
 /* 데스크탑 디바이스 */
 @media screen and (min-width: 1000px) {

@@ -12,18 +12,12 @@
         background: url("images/small.jpg") no-repeat;
         background-size: 100%;
     }
-    @media screen and (device-pixel-ratio: 2),
-         screen and (resolution: 192dpi) {
+    @media screen and (min-device-pixel-ratio: 2),
+         screen and (min-resolution: 192dpi) {
             .box {
                 background-image: url("images/large.jpg");
             }
         }
-    @media screen and (device-pixel-ratio: 3),
-        screen and (resolution: 288dpi) {
-        .box {
-            background-image: url("images/large.jpg");
-        }
-    }
     </style>
 </head>
 <body>

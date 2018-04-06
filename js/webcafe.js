@@ -38,36 +38,33 @@ $(document).ready(function () {
       });
 
       // 메인메뉴의 .menu-item 클릭 또는 엔터키를 눌렀을 때 실행할 함수
-      menuItems.on('click keydown',function(e){
-        if(e.type === 'click' || (e.type === 'keydown' && e.keyCode === 13)){
-          // 형제 요소인 li의 자식 요소인 .menu-item에 icon-minus 클래스와 menu-item-act를 제거하고 icon-plus 클래스를 추가했음.
-          // 형제 요소인 li의 자식 요소인 .menu-item에 aria-expanded 속성 값을 false로 설정.
-          $(this).parent().siblings().find(menuItems).removeClass('icon-minus menu-item-act').addClass('icon-plus');
-          $(this).parent().siblings().find(menuItems).attr('aria-expanded', 'false');
-          // 이벤트가 발생한 .menu-item에 .menu-item-act이 토글 되도록 설정함.
-          // 이렇게 지정할 경우 .menu-item을 한번 클릭하면 menu-item-act 클래스가 추가되고
-          // 한번 더 클릭하면 menu-item-act 클래스가 제거됨.
-          $(this).toggleClass('menu-item-act');
-          // .menu-item 요소에 .menu-item-act 클래스를 존재하는 경우
-          // aria-expanded 속성을 동적으로 변경시키고 
-          // 웹폰트 아이콘도 icon-plus에서 icon-minus로 수정함. 
-          if($(this).hasClass('menu-item-act')){
+      menuItems.on('click keydown', function(e) {
+        if (e.type === 'click' || (e.type === 'keydown' && e.keyCode === 13)) {
+          // 모든 .menu-list 요소에 menu-act 클래스 제거
+          menuLists.removeClass('menu-act');
+          // 모든 .menu-item 요소에 aria-expanded 속성 값으로 false 값
+          menuItems.attr('aria-expanded', 'false');
+          // 모든 .menu-item 요소에 icon-plus 클래스 추가
+          menuItems.addClass('icon-plus');
+          // 이벤트가 발생한 .menu-item 요소의 부모인 .menu-list 요소에 menu-act 클래스 추가
+          $(this).parent().addClass('menu-act');
+          // 이벤트가 발생한 .menu-item 요소의 부모인 .menu-list 요소가 .menu-act 클래스를 가졌을 경우
+          if ($(this).parent().hasClass('menu-act')) {
+            // 이벤트가 발생한 .menu-item 요소에 aria-expanded 속성 값을 true로 할당
             $(this).attr('aria-expanded', 'true');
-            $(this).removeClass('icon-plus').addClass('icon-minus');
-          }else{
-            $(this).attr('aria-expanded', 'false');
-            $(this).removeClass('icon-minus').addClass('icon-plus');
+            // 이벤트가 발생한 .menu-item 요소에 icon-minus 클래스 추가 후 icon-plus 클래스 제거
+            $(this).addClass('icon-minus').removeClass('icon-plus');
           }
-        }      
+        }
       });
 
-      // 키보드 초점이 메인메뉴 영역 안에 있을 경우 .is-act를 nav 요소에 추가하고 
-      // 키보드 초점이 메인메뉴 영역을 벗어날 경우 .is-act를 nav 요소에서 제거한다.
+      // 키보드 초점이 메인메뉴 영역 안에 있을 경우 .is-act를 nav 요소에 추가 
+      menu.on('focusin', function(){
+        nav.addClass('is-act');
+      });
+      // 키보드 초점이 메인메뉴 영역을 벗어날 경우 .is-act를 nav 요소에서 제거
       menu.on('focusout', function(){
           nav.removeClass('is-act');
-      });
-      menu.on('focusin', function(){
-          nav.addClass('is-act');
       });
     }
   });  

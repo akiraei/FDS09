@@ -362,7 +362,9 @@ body {
     list-style-type: disc;
     margin-left: 3em;
 }
-.menu-item-act + .sub-menu{
+/* .sub-menu 부모 요소인 .menu-list에 menu-act 클래스가 추가되거나
+   .sub-menu 형제 요소인 .menu-item에 menu-item-act 클래스가 추가될 경우 */
+.menu-act .sub-menu,.menu-item-act + .sub-menu{
   display: block;
 }
 .sub-menu a{
